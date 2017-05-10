@@ -1,0 +1,39 @@
+header{
+  padding: 20px;
+  text-align: center;
+  background-color: springgreen;
+}
+
+.airport {
+  text-align: center;
+  background-color: ;
+  padding: 10px;
+}
+
+.garagediv {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 20px;
+  background-color: green;
+}
+
+li {
+  padding: 5px;
+  margin-right: auto;
+  list-style: none;
+  text-align: justify;
+}
+
+.fullLot {
+  color: red;
+}
+
+
+/*MAP*/
+#map {
+       height: 400px;
+       width: 100%;
+      }
