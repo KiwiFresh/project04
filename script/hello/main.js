@@ -1,8 +1,8 @@
 $(document).ready(function() {
 //EVERYTHING GOES BELOW THIS
 
-var apiurl ="https://congress.api.sunlightfoundation.com/legislators";
-var searchurl= "https://congress.api.sunlightfoundation.com/legislators/locate?zip=11216"
+var apiurl ="https://cors-anywhere.herokuapp.com/https://congress.api.sunlightfoundation.com/legislators";
+var searchurl= "https://cors-anywhere.herokuapp.com/https://congress.api.sunlightfoundation.com/legislators/locate?zip="
 
 
 
@@ -36,9 +36,9 @@ var ajaxSearchOptions = {
 
 //try to figure out how to change zip code from searching
 $('button').click(function(){
-  var zipcode = $(this).val().substring(0, 5);
+  var zipcode = $('input').val().substring(0, 5);
  			if (zipcode.length == 5 && /^[0-9]+$/.test(zipcode))
- $('.firstname').empty();
+ $('.namediv').empty();
  ajaxSearchOptions.url = searchurl + zipcode;
  $.ajax(ajaxSearchOptions);
  console.log(zipcode);
