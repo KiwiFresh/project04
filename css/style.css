@@ -31,6 +31,30 @@ li {
   color: red;
 }
 
+.searchclass{
+  color: black;
+}
+.gov {
+  color:#ffeef2;
+  background-color: #17bebb;
+}
+
+.back {
+  background-color: grey;
+}
+
+.gov a {
+  color: yellow;
+  background-color:;
+}
+
+.namediv{
+  background-color: #0e7c7b;
+}
+
+div:empty {
+  display:none;
+}
 
 /*MAP*/
 #map {

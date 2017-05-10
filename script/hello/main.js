@@ -12,15 +12,15 @@ var searchurl= "https://cors-anywhere.herokuapp.com/https://congress.api.sunligh
   var updatePage = function( resp ) {
     $.each(resp.results,function(results, value){
       // console.log(value.first_name);
-      $('.firstname').append('<div class="col-sm-3 hey"<h3>'+value.first_name+'</h3></div>');
       var printout = '';
       printout = '<div class="col-sm-4 namediv"><h2>'+value.first_name+'   '+value.last_name+'</h2>';
       printout += '<ul><li> State: '+value.state_name+'</li>';
       printout += '<li> Email: '+value.oc_email+'</li>';
       printout += '<li> Phone: '+value.phone+'</li>';
-      printout += '<li> Website: '+value.website+'</li></ul></div>';
-      // printout += '<h1>'+value.last_name+'</h2></div>';
+      printout += '<li> Website: <a href="'+value.website+'">'+value.website+'</a></li></ul></div>';
       $('.printoutgo').append(printout);
+      // printout += '<h1>'+value.last_name+'</h2></div>';
+      // $('.printoutgo').append(printout);
 
     });
   };
@@ -32,8 +32,6 @@ var ajaxSearchOptions = {
  success: updatePage,
  error: ajaxFailed
 };
-
-
 //try to figure out how to change zip code from searching
 $('button').click(function(){
   var zipcode = $('input').val().substring(0, 5);
