@@ -35,7 +35,13 @@ var ajaxSearchOptions = {
 //try to figure out how to change zip code from searching
 $('button').click(function(){
   var zipcode = $('input').val().substring(0, 5);
- 			if (zipcode.length == 5 && /^[0-9]+$/.test(zipcode))
+ 			if (zipcode.length == 5 && /^[0-9]+$/.test(zipcode)){
+        console.log('working fine');
+      }
+      else {
+        alert('not valid zip code');
+      }
+
  $('.namediv').empty();
  ajaxSearchOptions.url = searchurl + zipcode;
  $.ajax(ajaxSearchOptions);
